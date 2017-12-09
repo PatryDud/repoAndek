@@ -19,54 +19,43 @@
         style="@style/Base.TextAppearance.AppCompat.Title"
         android:background="@color/white"
         android:layout_centerHorizontal="true"/>
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/text2"
         android:layout_below="@+id/podstawa"
-        android:textSize="18sp"
-        android:text="Czy mieszkasz poza miejscowością w któej pracujesz?"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/white"
-        android:background="@color/colorPrimaryDark"/>
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tak"
-        android:id="@+id/poza_miejscem"
-        android:layout_below="@+id/text2"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/poza_miejscem"
         android:id="@+id/text1"
-        android:text="Uwzględnij składki:"
+        android:text="Uwzględnij sk:"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:background="@color/colorPrimaryDark"
         />
-
-    <CheckBox
+<RadioGroup android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/radioGroup"
+    android:layout_below="@id/text1"
+    android:layout_marginTop="20dp">
+    <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ZUS"
+        android:text="Z przenieiseniem praw autorskisch"
         android:id="@+id/zus_radio"
-        android:layout_below="@+id/text1"
+
         />
-    <CheckBox
+    <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zdrowotna"
+        android:text="Bez przeniesienia praw autorskich"
         android:id="@+id/zdrowotna_radio"
-        android:layout_below="@+id/zus_radio"
         />
-
+</RadioGroup>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:id="@+id/linear"
-        android:layout_below="@+id/zdrowotna_radio"
+        android:layout_below="@+id/radioGroup"
         android:orientation="horizontal">
 
         <Button
@@ -90,7 +79,6 @@
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/gmail"
         android:layout_below="@id/linear"
-
         android:id="@+id/gmail"
         android:text="@string/wyslij_na_maila"/>
 
