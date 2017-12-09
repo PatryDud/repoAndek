@@ -38,7 +38,7 @@ public class Umowa_zlecenie extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_umowa_praca);
+        setContentView(R.layout.activity_umowa_zlecenie);
         textView = (TextView) findViewById(R.id.podatek);
         podatek_wynosi = "Podatek wynosi: ";
         textView.setText(podatek_wynosi);

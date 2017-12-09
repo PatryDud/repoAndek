@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Logowanie"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login "
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_below="@id/title"
+        android:id="@+id/loginLab"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+      android:layout_marginLeft="80dp"
+        android:layout_alignBottom="@id/loginLab"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Haslo "
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:layout_below="@id/loginLab"
+        android:id="@+id/hasloLab"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"/>
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/haslo"
+        android:layout_marginLeft="80dp"
+        android:layout_alignBottom="@id/hasloLab"
+        />
+
+
+</RelativeLayout>

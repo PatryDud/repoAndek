@@ -46,14 +46,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Z przenieiseniem praw autorskisch"
-        android:id="@+id/zus_radio"
+        android:id="@+id/radio_z"
         />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bez przeniesienia praw autorskich"
-        android:id="@+id/zdrowotna_radio"
+        android:id="@+id/radio_bez"
         />
 </RadioGroup>
     <Button

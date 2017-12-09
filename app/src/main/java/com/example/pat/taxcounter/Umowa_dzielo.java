@@ -54,13 +54,14 @@ public class Umowa_dzielo extends AppCompatActivity {
             RadioGroup radioGroup =(RadioGroup) findViewById(R.id.radioGroup);
             int id = radioGroup.getCheckedRadioButtonId();
             switch (id){
-                case 1: procentKoszty =0.5;
-                case 2: procentKoszty=0.2;
+                case R.id.radio_z: procentKoszty =0.5; break;
+                case R.id.radio_bez: procentKoszty=0.2; break;
             }
             Double do_zaplaty = 0.0;
            double koszty= procentKoszty*podstawa;
             final double procent_podatek = 0.18;
             final double kwota_wolna_od_pod = 46.33;
+            do_zaplaty = (podstawa-koszty)*procent_podatek-kwota_wolna_od_pod;
             wyswietl = (podatek_wynosi + (String.valueOf(Math.round(do_zaplaty))));
             textView.setText(wyswietl);
         }
