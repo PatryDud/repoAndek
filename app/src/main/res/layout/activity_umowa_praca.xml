@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pat.taxcounter.Umowa_praca"
+    android:id="@+id/relativeLayout"
+    android:background="@drawable/tlo">
+
+    <EditText
+    android:layout_width="350dp"
+        android:hint="Wprowadz wartosc wynagrodzenia"
+    android:layout_height="40dp"
+    android:id="@+id/podstawa"
+    android:inputType="numberDecimal"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        style="@style/Base.TextAppearance.AppCompat.Title"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+     />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel2"
+        android:layout_below="@+id/podstawa"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"
+
+        android:textSize="18sp"
+        android:text="Czy mieszkasz poza miejscowością w której pracujesz?"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tak"
+        android:id="@+id/poza_miejscem"
+        android:layout_below="@+id/text2"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/poza_miejscem"
+    android:id="@+id/text1"
+    android:text="Uwzględnij składki:"
+    android:layout_marginTop="20dp"
+    android:textSize="20sp"
+android:textColor="@color/black"
+
+    />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ZUS"
+        android:id="@+id/zus_radio"
+        android:layout_below="@+id/text1"
+        />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zdrowotna"
+        android:id="@+id/zdrowotna_radio"
+        android:layout_below="@+id/zus_radio"
+     />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="@string/oblicz"
+            android:id="@+id/oblicz"
+            android:onClick="onOblicz"
+            android:layout_below="@id/zdrowotna_radio"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:id="@+id/podatek"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:background="@color/white"
+            android:layout_below="@id/oblicz"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/rel2"
+    android:layout_centerHorizontal="true">
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/gmailBtn"
+        android:src="@drawable/gmail"
+        android:layout_marginLeft="30dp"
+        android:onClick="onWyslij"/>
+
+    <ImageButton
+        android:layout_marginLeft="10dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_save_black_48dp"
+       android:layout_marginStart="10dp"
+        android:onClick="onZapisz"
+      />
+
+</LinearLayout>
+
+</RelativeLayout>

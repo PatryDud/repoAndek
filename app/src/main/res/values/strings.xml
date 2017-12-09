@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TaxCounter</string>
+    <string name="z_tytu_u_ilu_stosunk_w_pracy_uzyskiwa_e_dochody">Z tytułu ilu stosunków pracy uzyskiwałeś dochody</string>
+    <string name="oblicz">Oblicz podtek</string>
+    <string name="wyslij_na_maila">Wyslij na maila</string>
+    <string-array name="rodzaje_umow">
+        <item>Umowa o pracę</item>
+        <item>Umowa zlecenie</item>
+        <item>Umowa o dzieło</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
