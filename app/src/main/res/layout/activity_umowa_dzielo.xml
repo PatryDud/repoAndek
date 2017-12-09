@@ -19,31 +19,36 @@
         style="@style/Base.TextAppearance.AppCompat.Title"
         android:background="@color/white"
         android:layout_centerHorizontal="true"/>
-
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel2"
+        android:layout_below="@+id/podstawa"
+        >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/podstawa"
+
         android:id="@+id/text1"
-        android:text="Uwzględnij sk:"
-        android:layout_marginTop="20dp"
+        android:text="Wybierz sposób oblicznia podatku: "
+        android:layout_marginTop="15dp"
         android:textSize="20sp"
-        android:textColor="@color/white"
-        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+
         />
 <RadioGroup android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/radioGroup"
     android:layout_below="@id/text1"
-    android:layout_marginTop="20dp">
+    android:layout_marginTop="15dp">
     <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Z przenieiseniem praw autorskisch"
         android:id="@+id/zus_radio"
-
         />
+
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,35 +56,48 @@
         android:id="@+id/zdrowotna_radio"
         />
 </RadioGroup>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:id="@+id/linear"
-        android:layout_below="@+id/radioGroup"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/oblicz"
-            android:id="@+id/oblicz"
-            android:onClick="onOblicz"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/podatek"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:layout_marginLeft="20dp"
-            android:background="@color/white"/>
-    </LinearLayout>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/gmail"
-        android:layout_below="@id/linear"
-        android:id="@+id/gmail"
-        android:text="@string/wyslij_na_maila"/>
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="@string/oblicz"
+        android:id="@+id/oblicz"
+        android:onClick="onOblicz"
+        android:layout_below="@id/radioGroup"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/podatek"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:background="@color/white"
+        android:layout_below="@id/oblicz"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
+<LinearLayout
+android:layout_width="200dp"
+android:layout_height="wrap_content"
+android:layout_below="@id/rel2"
+android:layout_centerHorizontal="true">
+<ImageButton
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:id="@+id/gmailBtn"
+    android:src="@drawable/gmail"
+    android:layout_marginLeft="30dp"
+    android:onClick="onWyslij"/>
+
+<ImageButton
+    android:layout_marginLeft="10dp"
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:src="@drawable/ic_save_black_48dp"
+    android:layout_marginStart="10dp"
+    android:onClick="onZapisz"
+    />
+
+</LinearLayout>
+    </RelativeLayout>
