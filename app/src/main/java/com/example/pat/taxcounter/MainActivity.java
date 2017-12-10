@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         AdapterView.OnItemClickListener itemClickListener =
                 new AdapterView.OnItemClickListener(){
                     public void onItemClick(AdapterView<?> listView,
